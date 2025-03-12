@@ -1,0 +1,28 @@
+<?php
+// Include the access control script
+include '../../../scripts/sub_process_login.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clubs</title>
+</head>
+<body>
+    <a href="../main.php">Go back</a>
+    <h1>Clubs</h1> 
+    <form method="get" action="../../../scripts/generate_form.php">
+        <input type="hidden" name="table_name" value="clubs">
+
+        <select id="type_attributes" name="type_attributes" required>
+            <option value="number~club_id">Club Id</option>
+            <option value="number~club_size">Club Size</option>
+            <option value="text~club_name">Club Name</option>
+            <option value="text~club_desc">Club Description</option>
+        </select>
+
+        <button type="submit">Select</button>
+    </form>
+</body>
+</html>

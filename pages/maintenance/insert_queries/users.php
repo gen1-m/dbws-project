@@ -1,0 +1,28 @@
+<?php
+// Include the access control script
+include '../../../scripts/sub_process_login.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+</head>
+<body>
+    <a href="../main.php">Go back</a>
+    <h1>Users</h1> 
+
+    <form method="post" action="../../../scripts/process_form.php">
+        <input type="hidden" name="table_name" value="users">
+
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

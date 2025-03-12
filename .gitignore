@@ -1,0 +1,8 @@
+# env files
+*.env
+
+# SSL certificates
+ca.pem
+
+# .idea
+/*.idea
