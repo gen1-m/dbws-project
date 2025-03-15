@@ -5,35 +5,103 @@ include '../../../scripts/sub_process_login.php';
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Spline Sans Mono', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    /* Container styling */
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+    /* Link styling */
+    a {
+      color: #3d405b;
+      text-decoration: none;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* Heading styling */
+    h1 {
+      text-align: center;
+      color: #3d405b;
+      margin-bottom: 20px;
+    }
+    /* Form styling */
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="datetime-local"],
+    select {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #3d405b;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #2a2e38;
+    }
+  </style>
 </head>
 <body>
-    <h1>Events</h1> 
-
+  <div class="container">
+    <a href="../main.php">Go back</a>
+    <h1>Events</h1>
     <form method="post" action="../../../scripts/process_form.php">
-        <input type="hidden" name="table_name" value="events">
-
-        <label for="event_size">Event Size:</label><br>
-        <input type="text" id="event_size" name="event_size" required><br><br>
-
-        <label for="event_name">Event Name:</label><br>
-        <input type="text" id="event_name" name="event_name" required><br><br>
-
-        <label for="event_desc">Event Description:</label><br>
-        <input type="text" id="event_desc" name="event_desc" required><br><br>
-
-        <label for="event_privacy">Event Privacy:</label><br>
-        <select id="event_privacy" name="event_privacy" required>
-            <option value="private">Private</option>
-            <option value="public">Public</option>
-        </select><br><br>
-
-        <label for="event_time">Event Time:</label><br>
-        <input type="datetime-local" id="event_time" name="event_time" required><br><br>
-
-        <button type="submit">Submit</button>
+      <input type="hidden" name="table_name" value="events">
+      <label for="event_size">Event Size:</label>
+      <input type="text" id="event_size" name="event_size" required>
+      <label for="event_name">Event Name:</label>
+      <input type="text" id="event_name" name="event_name" required>
+      <label for="event_desc">Event Description:</label>
+      <input type="text" id="event_desc" name="event_desc" required>
+      <label for="event_privacy">Event Privacy:</label>
+      <select id="event_privacy" name="event_privacy" required>
+        <option value="private">Private</option>
+        <option value="public">Public</option>
+      </select>
+      <label for="event_time">Event Time:</label>
+      <input type="datetime-local" id="event_time" name="event_time" required>
+      <button type="submit">Submit</button>
     </form>
+  </div>
 </body>
 </html>
