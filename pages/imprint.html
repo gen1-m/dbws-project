@@ -1,28 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imprint</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imprint</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Spline+Sans+Mono&display=swap" rel="stylesheet" />
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Spline Sans Mono', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      box-sizing: border-box;
+      padding-bottom: 80px; /* Prevents content from being hidden behind the fixed footer */
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Header Styles */
+    .header {
+      background-color: #3d405b;
+      color: white;
+      padding: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .logo img {
+      height: 40px;
+      margin-left: 20px;
+    }
+    .navbar {
+      margin-right: 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+    .navbar li {
+      cursor: pointer;
+    }
+    .navbar a {
+      color: white;
+      text-decoration: none;
+    }
+    .maintenance {
+      margin-left: 20px;
+      background-color: #f44336;
+      padding: 5px 10px;
+      border-radius: 5px;
+      color: white;
+      text-decoration: none;
+    }
+    .maintenance:hover {
+      background-color: #d32f2f;
+    }
+    
+    /* Imprint Content Styles */
+    .container h1 {
+      text-align: center;
+      color: #3d405b;
+      margin-bottom: 1rem;
+    }
+    .container p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+    .container a {
+      color: #3d405b;
+      text-decoration: none;
+    }
+    .container a:hover {
+      text-decoration: underline;
+    }
+    .section {
+      margin-bottom: 1.5rem;
+    }
+    .section strong {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Footer Styles - Fixed at the bottom */
+    .footer {
+      background-color: #333;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+    .footer .imprint {
+      background-color: #4CAF50;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .footer .imprint a {
+      color: white;
+      text-decoration: none;
+    }
+    .footer .imprint:hover {
+      background-color: #45a049;
+    }
+  </style>
 </head>
 <body>
+  <!-- Header with Navigation -->
+  <div class="header">
+    <div class="logo">
+      <img src="../images/logo/logo-white.svg" alt="Logo" />
+    </div>
+    <nav class="navbar">
+      <ul class="tabs">
+        <li class="myEvents">My Events</li>
+        <li class="myClubs">My Clubs</li>
+        <li class="map">
+          <a class="map" href="geo_location/map.html">GeoLocation</a>
+        </li>
+      </ul>
+      <a class="maintenance" href="maintenance/login.php">Maintenance Page</a>
+    </nav>
+  </div>
+  
+  <!-- Main Content: Imprint Information -->
+  <div class="container">
     <h1>IMPRINT PAGE</h1>
-    <p>
-        Contact us: <br>
-        jlumi at constructor.university <br>
-        emamaj at constructor.university <br>
-        xlutaj at constructor.university <br>
-        akoroveshi at constructor.university <br>
-        <br>
-        Imprint message: <br>
-        This website is student lab work and does not necessarily reflect Jacobs University Bremen opin-
-        ions. Jacobs University Bremen does not endorse this site, nor is it checked by Jacobs University
-        Bremen regularly, nor is it part of the official Jacobs University Bremen web presence.
-        For each external link existing on this website, we initially have checked that the target page
-        does not contain contents which is illegal wrt. German jurisdiction. However, as we have no in-
-        fluence on such contents, this may change without our notice. Therefore we deny any responsib-
-        ility for the websites referenced through our external links from here.
-        No information conflicting with GDPR is stored in the server.
-    </p>
+    <div class="section">
+      <p>
+        <strong>Contact us:</strong>
+        <a href="mailto:jlumi@constructor.university">jlumi@constructor.university</a><br>
+        <a href="mailto:emamaj@constructor.university">emamaj@constructor.university</a><br>
+        <a href="mailto:xlutaj@constructor.university">xlutaj@constructor.university</a><br>
+        <a href="mailto:akoroveshi@constructor.university">akoroveshi@constructor.university</a>
+      </p>
+    </div>
+    <div class="section">
+      <p>
+        <strong>Imprint message:</strong>
+        This website is student lab work and does not necessarily reflect Jacobs University Bremen opinions.
+        Jacobs University Bremen does not endorse this site, nor is it checked by Jacobs University Bremen regularly,
+        nor is it part of the official Jacobs University Bremen web presence.
+        For each external link existing on this website, we initially have checked that the target page does not contain contents
+        which is illegal with respect to German jurisdiction. However, as we have no influence on such contents, this may change
+        without our notice. Therefore we deny any responsibility for the websites referenced through our external links from here.
+        No information conflicting with GDPR is stored on the server.
+      </p>
+    </div>
+  </div>
+  
+  <!-- Fixed Footer -->
+  <div class="footer">
+    @ 2023 Rendezvous. All the rights reserved.
+    <button class="imprint">
+      <a href="imprint.html">Imprint Page</a>
+    </button>
+  </div>
 </body>
 </html>
