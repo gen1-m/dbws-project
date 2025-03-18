@@ -36,7 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       margin: 0;
       padding: 0;
     }
-    /* Container for the login form */
     .container {
       max-width: 400px;
       margin: 100px auto;
@@ -45,20 +44,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       border: 1px solid #ddd;
       border-radius: 8px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
     }
     h2 {
-      text-align: center;
       color: #3d405b;
       margin-bottom: 20px;
     }
-    /* Form Element Styles */
     label {
       display: block;
+      text-align: left;
       margin-bottom: 5px;
       color: #333;
     }
-    input[type="text"],
-    input[type="password"] {
+    input[type="text"], input[type="password"] {
       width: 100%;
       padding: 10px;
       margin-bottom: 15px;
@@ -67,6 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       box-sizing: border-box;
     }
     button {
+      font-family: 'Spline Sans Mono', sans-serif;
       background-color: #3d405b;
       color: #fff;
       border: none;
@@ -75,15 +74,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       border-radius: 4px;
       cursor: pointer;
       font-size: 16px;
+      margin-top: 10px;
     }
     button:hover {
       background-color: #2a2e38;
     }
-    .error {
-      color: red;
-      text-align: center;
-      margin-bottom: 15px;
+
+    a {
+      text-decoration: none;
+      color: white;
     }
+
   </style>
 </head>
 <body>
@@ -91,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h2>Login</h2>
     
     <?php if (isset($error_message)): ?>
-      <p class="error"><?php echo $error_message; ?></p>
+      <p class="error" style="color: red;"><?php echo $error_message; ?></p>
     <?php endif; ?>
     
     <form method="post" action="">
@@ -103,6 +104,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       
       <button type="submit">Login</button>
     </form>
+
+    <button>
+      <a href="/index.html">Back Home</a>
+    </button>
   </div>
 </body>
 </html>
